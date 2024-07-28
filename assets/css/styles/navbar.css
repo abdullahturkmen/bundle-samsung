@@ -1,0 +1,12 @@
+.navbar {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 0) 0%,
+    rgba(250, 250, 250, 1) 35%
+  );
+}
+
+.navbar .navbar-logo{
+    transition: all .1s linear;
+}

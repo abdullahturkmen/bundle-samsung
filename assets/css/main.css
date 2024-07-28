@@ -1,0 +1,14 @@
+@import url("https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Poppins:wght@500;600;700&display=swap");
+@import url("./styles/scroll.css");
+@import url("./styles/navbar.css");
+body {
+  background-color: rgb(250, 250, 250);
+  background-image: linear-gradient(rgba(19, 156, 198, 11%) 1px, transparent 0),
+    linear-gradient(90deg, rgba(19, 156, 198, 11%) 1px, rgb(250, 250, 250) 0);
+  background-size: 30px 30px;
+}
+
+.font-poppins{
+    font-family: Poppins, sans-serif;
+}

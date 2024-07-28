@@ -1,0 +1,33 @@
+.tweet-list li{
+    transition: all .2s linear;
+}
+.tweet-list li .inner-element{
+    box-shadow: inset 5px 5px 0 rgba(0, 0, 0, .25);
+}
+@media screen and (max-width: 767px) {
+    .tweet-list li{
+        opacity: .6;
+        transform: scale(.95) translateX(0);
+    }
+    .tweet-list li.active{
+        opacity: 1;
+        transform: scale(1) translateX(0);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .tweet-list li{
+        opacity: .7;
+    }
+    .tweet-list li.right-items{
+        transform: scale(.85) translateX(45%);
+    }
+    .tweet-list li.left-items{
+        transform: scale(.85) translateX(-45%);
+    }
+    .tweet-list li.active{
+        opacity: 1;
+        transform: scale(1) translateX(0);
+    }
+    
+  }
