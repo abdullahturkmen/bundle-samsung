@@ -253,74 +253,37 @@ export const tweetList = (filter) => {
     let indexNum = 0;
     tweets.forEach((tweet, index) => {
         if (filter && !tweet.highlight) return;
-        const li = document.createElement('li');
-        const liClass = "w-full md:w-1/2 p-0 flex items-center justify-center relative "
-
+        let liClass = "w-full md:w-1/2 p-0 flex items-center justify-center relative "
 
         if (indexNum % 2 === 0) {
-            li.className = `${liClass} left-items`;
+            liClass = `${liClass} left-items`;
         }
         else {
-            li.className = `${liClass} right-items`;
+            liClass = `${liClass} right-items`;
         }
 
-        const innerDiv = document.createElement('div');
-        innerDiv.className = 'inner-element bg-white p-7 rounded-3xl shadow w-full md:w-2/3 border-2 border-black font-poppins m-2 md:m-8 lg:m-14';
+        const inner = `<li class="${liClass}">
+        <div class="inset-shadow bg-white p-7 rounded-3xl shadow w-full md:w-2/3 border-2 border-black font-poppins m-2 md:m-8 lg:m-14">
+        <div class="tweet-text text-lg mb-6">${tweet.tweetContent}</div>
+        <div class="innerDiv1 flex justify-between text-xs">
+        <div class="innerDiv3 flex sm:flex-col lg:flex-row">
+        <div class="author-name border-r border-gray-400 pr-2 mr-2">${tweet.author}</div>
+        <div class="like-count flex">${tweet.likeCount}</div>
+        </div>
+        <div class="innerDiv4 flex sm:flex-col lg:flex-row">
+        <div class="share-btn flex justify-start sm:justify-end lg:justify-start">
+        <a class="flex" href="https://x.com/intent/tweet?text=${encodeURIComponent(tweet.tweetContent)}" target="_blank">Paylaş</a>
+        </div>
+        <div class="like-btn flex ml-4">
+        <a class="flex" href="https://x.com/intent/tweet?text=${encodeURIComponent(tweet.tweetContent)}" target="_blank">Beğen</a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </li>`;
 
-        const tweetTextDiv = document.createElement('div');
-        tweetTextDiv.className = 'tweet-text text-lg mb-6';
-        tweetTextDiv.textContent = tweet.tweetContent;
+        tweetList.innerHTML += inner
 
-        const innerDiv1 = document.createElement('div');
-        innerDiv1.className = 'innerDiv1 flex justify-between text-xs'
-
-        const innerDiv3 = document.createElement('div');
-        innerDiv3.className = 'innerDiv3 flex sm:flex-col lg:flex-row'
-
-        const authorNameDiv = document.createElement('div');
-        authorNameDiv.className = 'author-name border-r border-gray-400 pr-2 mr-2';
-        authorNameDiv.textContent = tweet.author;
-
-        const likeCountDiv = document.createElement('div');
-        likeCountDiv.className = 'like-count flex';
-        likeCountDiv.textContent = `${tweet.likeCount}`;
-
-        innerDiv3.appendChild(authorNameDiv);
-        innerDiv3.appendChild(likeCountDiv);
-
-        const innerDiv4 = document.createElement('div');
-        innerDiv4.className = 'innerDiv4 flex sm:flex-col lg:flex-row'
-
-        const shareBtnDiv = document.createElement('div');
-        shareBtnDiv.className = 'share-btn flex justify-start sm:justify-end lg:justify-start';
-        const shareButton = document.createElement('a');
-        shareButton.className = 'flex';
-        shareButton.href = `https://x.com/intent/tweet?text=${encodeURIComponent(tweet.tweetContent)}`;
-        shareButton.target = '_blank';
-        shareButton.textContent = 'Paylaş';
-        shareBtnDiv.appendChild(shareButton);
-
-        const likeBtnDiv = document.createElement('div');
-        likeBtnDiv.className = 'like-btn flex ml-4';
-        const likeButton = document.createElement('a');
-        likeButton.className = 'flex';
-        likeButton.href = `https://x.com/intent/tweet?text=${encodeURIComponent(tweet.tweetContent)}`;
-        likeButton.target = '_blank';
-        likeButton.textContent = 'Beğen';
-        likeBtnDiv.appendChild(likeButton);
-
-        innerDiv4.appendChild(shareBtnDiv);
-        innerDiv4.appendChild(likeBtnDiv);
-
-        innerDiv1.appendChild(innerDiv3);
-        innerDiv1.appendChild(innerDiv4);
-
-        innerDiv.appendChild(tweetTextDiv);
-        innerDiv.appendChild(innerDiv1);
-
-        li.appendChild(innerDiv);
-
-        tweetList.appendChild(li);
         indexNum++
     });
 

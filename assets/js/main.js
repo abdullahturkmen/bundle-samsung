@@ -2,6 +2,7 @@ import { tweetList } from './modules/tweetModule.js';
 import { trackScroll } from './modules/scrollModule.js';
 import { highlightMiddleItems } from './modules/highlightModule.js'
 import { updateSelection } from './modules/updateSelection.js';
+import { setupModal } from './modules/modalModule.js'
 
 tweetList(false);
 
@@ -31,4 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+setupModal();
 

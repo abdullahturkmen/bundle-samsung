@@ -1,0 +1,21 @@
+.modal {
+  min-height: 100dvh;
+  background-color: #00000024;
+}
+
+.modal .modal-content {
+  max-height: 80%;
+}
+
+.modal .modal-close {
+  top: -30px;
+  right: -30px;
+}
+
+@media screen and (max-width: 991px) {
+    .modal .modal-close {
+        top: -30px;
+        right: 30px;
+      }
+      
+  }

@@ -12,3 +12,30 @@
   background-repeat: no-repeat;
   background-size: 100% 125%;
 }
+
+.footer .tweet-type .active {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcgAAAAICAYAAAB9Pm/qAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFYSURBVHgB7drtbcIwEAbgF6n/m07AbdARWjbpKO0knakbuBNAN6iNEgksx/FdcBQn7yOdEElkAwp38ccBRPsksBHoCWwEep2PZ+gJ9AT1Xfpoof2/TFsO5X2njtf+HSjhAHoUgV7XxxJ9haT5Ar0j9Jb8Xta+iFqnKaSp42MF/dyfK2njlkNec0V+KJDv0CcnS8K1Pt1akqA1cTLhEhGth0MduVzvfJxCgfzw8Q0ionJhJPADmzPuRxK5qck5LA/k4uN34ppjpr8u0y615esJHC3txTC9wREyPUK4h95AtGFhBBlu9E8fr9G5VCIVELXLwW5t6ycy8zwR5Z3mbtKJi2iqqJYU2tRUSHyN5hjVd1swXPQ6iKeqLIv/DuWfg8blZg6WXOMfI1gPy8a0vZmahq7BYR6nuO6aV7a6i1Wi92N/Zik8Zt1ctEZT6z2pIub610sURESb9Q+J9ElL0eSSSwAAAABJRU5ErkJggg==)
+    top no-repeat;
+  background-position: 0 21px;
+  background-size: contain;
+  padding-bottom: 5px;
+}
+
+.footer .msg-open-btn {
+  background-image: url(./../../img/message-submit.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.1s linear;
+  transform: translate(-5px, -5px);
+}
+
+.footer .msg-open-btn:active {
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  transform: translate(0, 0);
+}
+
+.footer .msg-open-btn img {
+  width: 25px;
+}
