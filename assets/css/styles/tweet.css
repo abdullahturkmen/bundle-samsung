@@ -1,0 +1,32 @@
+.tweet-list .like-count::before {
+  content: "";
+  background-image: url(./../../img/heart.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  background-size: contain;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.tweet-list .share-btn a::after {
+  content: "";
+  background-image: url(./../../img/share.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  background-size: contain;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.tweet-list .like-btn a::after {
+  content: "";
+  background-image: url(./../../img/like.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 16px;
+  background-size: contain;
+  display: inline-block;
+  margin-left: 6px;
+}

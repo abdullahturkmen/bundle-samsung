@@ -1,0 +1,14 @@
+.footer {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(250, 250, 250, 0.95) 35%
+  );
+}
+
+.footer .tweet-type {
+  background-image: url(./../../img/bottom-navigation-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 125%;
+}

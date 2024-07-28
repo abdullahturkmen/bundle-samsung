@@ -1,4 +1,4 @@
-export function highlightMiddleItems() {
+export const highlightMiddleItems = () => {
     const itemList = document.getElementById('tweet-list');
     const items = itemList.getElementsByTagName('li');
     const viewportHeight = window.innerHeight;
@@ -9,7 +9,7 @@ export function highlightMiddleItems() {
         const rect = item.getBoundingClientRect();
         const itemMiddle = rect.top + rect.height / 2;
 
-        if (itemMiddle + 5 >= middle - rect.height / 2 && itemMiddle - 5 <= middle + rect.height / 2) {
+        if (itemMiddle - 65 >= middle - rect.height / 2 && itemMiddle - 95 <= middle + rect.height / 2) {
             item.classList.add('active');
         } else {
             item.classList.remove('active');

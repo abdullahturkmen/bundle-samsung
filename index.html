@@ -11,14 +11,40 @@
 <body>
     <div class="mx-0 p-0 w-full ">
 
-        <div class="navbar flex-column justify-between w-full fixed z-20">
-            <div class="flex justify-between max-w-screen-xl mx-auto">
-                <div><a href="">BİR BUNDLE STUDIO PROJESİ</a></div>
-                <div>3</div>
+        <header class="navbar flex flex-col justify-between w-full fixed z-20">
+            <div class="navbar-container px-2">
+                <nav class="flex justify-between items-center max-w-screen-xl mx-auto py-4">
+                    <div><a href="" class="info-bundle relative flex items-center font-poppins text-xs font-bold">BİR
+                            BUNDLE STUDIO PROJESİ</a></div>
+                    <div><a href=""
+                            class="share-btn relative flex items-center font-poppins text-xs font-bold">Paylaş</a></div>
+                </nav>
+                <div class="flex justify-center w-full"><img id="navbar-logo" class="navbar-logo"
+                        src="./assets/img/logo@2x.png" /></div>
             </div>
-            <div class="flex justify-center w-full"><img id="navbar-logo" class="navbar-logo" src="./assets/img/logo@2x.png" /></div>
-        </div>
-        <ul id="tweet-list" class="flex flex-wrap tweet-list mx-0 p-0 w-full overflow-hidden"></ul>
+
+            <div id="navbar-description" class="max-w-xl md:max-w-lg lg:max-w-xl text-center text-lg mx-auto py-6 px-2">
+                20 yıl sonrası için dilek ve beklentilerini <strong>31 Ocak</strong> tarihine kadar yaz. <strong>Herkes
+                    görsün, beğensin</strong>. 31 Ocak 2023 tarihine kadar en çok beğeni alan <strong>5 kişiye</strong>
+                20 yıl garantili seçili Samsung beyaz eşyalarda geçerli <strong>%20 indirim kodu hediye!</strong>
+            </div>
+        </header>
+        <main>
+            <ul id="tweet-list" class="flex flex-wrap tweet-list mx-0 p-0 pt-96 md:pt-0 w-full overflow-hidden"></ul>
+        </main>
+        <footer class="footer fixed bottom-0 w-full flex flex-col items-center">
+            <div>1</div>
+            <div class="tweet-type px-24 py-8 hidden md:flex text-lg ">
+                <div>
+                    <input type="radio" id="option1" name="options" value="all" class="form-radio hidden mx-8" selected>
+                    <label for="option1" id="label1" class="mx-2 font-bold cursor-pointer">Geleceğe Tüm mesajlar</label>
+                </div>
+                <div>
+                    <input type="radio" id="option2" name="options" value="highlight" class="form-radio hidden mx-8">
+                    <label for="option2" id="label2" class="mx-2 cursor-pointer">Öne Çıkanlar</label>
+                </div>
+            </div>
+        </footer>
 
     </div>
 
