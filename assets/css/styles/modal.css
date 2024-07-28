@@ -13,9 +13,23 @@
 }
 
 @media screen and (max-width: 991px) {
-    .modal .modal-close {
-        top: -30px;
-        right: 30px;
-      }
-      
+  .modal .modal-close {
+    top: -30px;
+    right: 30px;
   }
+}
+
+.modal .send-form-btn {
+  background-image: url(./../../img/message-submit.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.1s linear;
+  transform: translate(-5px, -5px);
+}
+
+.modal .send-form-btn:active {
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  transform: translate(0, 0);
+}

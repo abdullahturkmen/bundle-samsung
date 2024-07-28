@@ -12,7 +12,13 @@
     <div class="mx-0 p-0 w-full ">
 
         <header class="navbar flex flex-col justify-between w-full fixed z-20">
+
             <div class="navbar-container px-2">
+                <div
+                    class="text-center w-full justify-center font-poppins text-xs font-semibold flex md:hidden bg-gray-100 py-2">
+                    <a modal-content="disclaimer" class="hover:underline cursor-pointer open-modal">Kampanya Kullanım
+                        Koşulları</a>
+                </div>
                 <nav class="flex justify-between items-center max-w-screen-xl mx-auto py-4">
                     <div><a href=""
                             class="info-bundle relative flex items-center font-poppins text-xs font-bold hover:underline">BİR
@@ -36,7 +42,7 @@
         <footer class="footer fixed bottom-0 w-full flex flex-col items-center">
             <div>
                 <a class="flex msg-open-btn text-xl font-bold px-12 py-6 mb-10 items-center cursor-pointer open-modal"
-                    type="disclaimer">
+                    modal-content="form">
                     <span class="mr-3">Geleceğe mesajını bırak</span>
                     <img src="./assets/img/pencil.png" />
                 </a>
@@ -52,52 +58,12 @@
                     <label for="option2" id="label2" class="mx-2 cursor-pointer">Öne Çıkanlar</label>
                 </div>
             </div>
+            <div
+                class="text-center absolute bottom-3 right-3 font-poppins text-xs underline font-semibold hidden md:flex  cursor-pointer">
+                <a modal-content="disclaimer" class="open-modal">Yarışma Koşulları</a>
+            </div>
         </footer>
 
-    </div>
-
-    <div id="myModal" class="modal hidden w-full z-50 fixed top-0 left-0 flex items-center justify-center">
-        <div
-            class="modal-content inset-shadow bg-white p-4 md:p-12 lg:p-16 rounded-3xl shadow border-4 border-black max-w-3xl mx-auto relative">
-            <div class="modal-head">
-                <img class="modal-close cursor-pointer absolute h-16 w-16" src="./assets/img/close.png"
-                    id="closeModalBtn" />
-            </div>
-            <div class="modal-body pt-6 md:pt-0">
-                <h3 class="text-3xl mb-6"><strong>20 yıl sonraki</strong> kendine mesaj<br> gönderebilsen <strong>ne
-                        derdin?</strong></h3>
-                <p class="text-sm mb-6 text-gray-700">20 yıl sonrası için dilek ve beklentilerini <strong>31
-                        Ocak</strong>tarihine kadar yaz. <strong>Herkes görsün, beğensin.</strong> 31 Ocak
-                    2023 tarihine kadar en çok beğeni alan <strong>5 kişiden</strong> biri ol! 20 yıl garantili Seçili
-                    Samsung beyaz
-                    eşyalarda geçerli <strong>%20 indirim koduna sahip ol.</strong></p>
-                <div class="flex flex-col md:flex-row w-full justify-between mb-4">
-                    <div class="mb-5 md:mb-0"><input type="text"
-                            class="w-full rounded-xl shadow border-2 border-black px-6 py-4 text-xl font-poppins text-gray-700 inset-shadow"
-                            placeholder="Ad Soyad" />
-                    </div>
-                    <div><input type="text"
-                            class="w-full rounded-xl shadow border-2 border-black px-6 py-4 text-xl font-poppins text-gray-700 inset-shadow"
-                            placeholder="E-mail" />
-                    </div>
-                </div>
-                <div class="mb-6">
-                    <textarea type="text"
-                        class="w-full rounded-xl shadow border-2 border-black px-6 py-4 text-xl font-poppins text-gray-700 inset-shadow"
-                        placeholder="Geleceğe Mesajını Bırak..." rows="4"></textarea>
-                </div>
-
-                <div class="font-poppins text-xs text-gray-500">
-                    *İndirim oranı, tavsiye edilen satış fiyatı üzerinden, 20 yıl Dijital Inverter Motor ve Dijital
-                    Inverter Kompresör garantili seçilmiş ürünlerde geçerlidir. İndirim kodu 31 Mart 2023 tarihine kadar
-                    geçerlidir.**Seçili Samsung çamaşır ve kurutma makineleri 20 yıl Dijital Inverter Motor garantili,
-                    seçili Samsung buzdolapları 20 yıl Dijital Inverter Kompresör garantilidir. Detaylı bilgi için
-                    <a class="underline"
-                        href="https://www.samsung.com/tr/secili-beyaz-esyalarda-20-yil-garanti/">https://www.samsung.com/tr/secili-beyaz-esyalarda-20-yil-garanti/</a>
-                </div>
-
-            </div>
-        </div>
     </div>
 
     <script type="module" src="./assets/js/main.js"></script>
